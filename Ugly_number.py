@@ -1,17 +1,22 @@
-
-def ugly(n):
-    if(n==1):
-        return 1
-    if(n<=0):
-        return 0
-    if(n%2==0):
-        return ugly(n=n//2)
-    if(n%3==0):
-        return ugly(n=n//3)
-    if(n%5==0):
-        return ugly(n=n//5)
-n=int(input())
-if(ugly(n)==1):
-    print('Ugly Number')
+a=int(input())
+f=0
+if a>0:
+    while a>0:
+        if a%2==0:
+            a//=2
+        elif a%3==0:
+            a//=3
+        elif a%5==0:
+            a//=5
+        else:
+            f=1
+            break
+    if f==1:
+        if a==1:
+            print("Ugly Number")
+        else:
+            print("Not Ugly Number")
+    else:
+        print("Ugly Number")
 else:
-    print('Not Ugly Number')
+    print("Not Ugly Number")
