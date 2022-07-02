@@ -1,0 +1,18 @@
+n=int(input())
+temp=n
+m=n
+a=0
+sum=0
+while(n):
+    i=n%10
+    a=a+1
+    n=n//10
+while(m):
+    j=m%10
+    sum=sum+pow(j,a)
+    m=m//10
+    a-=1
+if(sum==temp):
+    print(True)
+else:
+    print(False)
