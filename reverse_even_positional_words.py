@@ -1,9 +1,9 @@
 n=input()
-z=n.split()
-c=0
-for i in z: 
-    if c%2==0:
-        print(i[::-1],end=" ")
+a=list(n.split(" "))
+b=[]
+for i in range(len(a)):
+    if(i%2==0):
+        b.append(a[i][::-1])
     else:
-        print(i,end=" ")
-    c+=1
+        b.append(a[i])
+print(*b)
