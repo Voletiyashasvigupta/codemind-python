@@ -1,15 +1,11 @@
-s=input()
-arr="abcdefghijklmnopqrstuvwxyz"
-c=v=0
-for i in arr:
-    if i in s or i.upper() in s:
+n=input()
+n=n.lower()
+n=set(n)
+c=0
+for i in n:
+    if(i.isalpha()):
         c+=1
-    else:
-        v=1
-        break
-if(v!=1):
+if(c==26):
     print(True)
 else:
     print(False)
-    
-
