@@ -1,26 +1,18 @@
-def prime(a):
-    c=0
-    for i in range(1,a+1):
-        if a%i==0:
-            c+=1
-    if c==2:
-        return 1
+n=int(input())
+l=[]
+for i in range(1,(n//2)+1):
+    for j in range(2,int(i**0.5)+1):
+        if(i%j==0):
+            break
     else:
-        return 0
-a=int(input())
-b=[]
-su=0
-for i in range(1,a+1):
-    if prime(i)==1 :
-        b.append(i)
-for j in range(len(b)):
-    for k in range(len(b)):
-        if(j==k):
-            continue
-        else:
-            if(b[j]*b[k]==a):
-                su+=1
-                print(b[j],end=' ')
-                break
-if(su!=2):
-    print("-1")
+        l.append(i)
+c=0
+for i in range(0,len(l)):2,3,5,7
+    for j in range(i,len(l)):
+        if(l[i]*l[j]==n):
+            c=c+1
+            print(l[i],l[j])
+            break
+if(c==0):
+    print(-1)
+        
